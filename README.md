@@ -1,1 +1,1 @@
-Primeira vez no com Git ^_^
+Primeira vez no Git ^_^ usando VIM como editor de texto.
