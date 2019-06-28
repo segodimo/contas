@@ -1,18 +1,43 @@
-const express = require('express');
-const router = express.Router();
+module.exports = app => {
+	app.get('/api/', (req, res) => {
+		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+		db.query('SELECT * FROM usuarios', function (err, rows) {
+		    var user = rows.length && rows[0];
+		  	// console.log(rows);
+		    res.json(rows);
+			// res.json({status: 'Inicio ASASASAS'});
+		  }
+		);
+		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+	});
+};
 
-router.get('/', (req, res) => {
-    res.end('Funcionando Git Mano!')
-});
 
 
-//const indexController = require('../controllers/index');
 
-//router.get('/', indexController.index);
 
-//router.get('/products', indexController.getProducts);
+// const { Router } = require('express');
+// const sqlite = require('sqlite3');
+// const router = Router();
 
-//router.post('/new-product', indexController.addProduct);
+// // connection to db
+// // const db = new sqlite.Database('cnts.db', (err) => console.log('CONEXION DB'));
 
-module.exports = router;
+// /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+// // require('../db/database');
+// router.get('/', (req, res) => {
+// 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// 	res.json({tsxt: 'index index index index'});
+// 	/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+// 	// db.all('select * from usuarios', (err, results) => {
+// 	//   console.log(results);
+// 	//   res.json(results);
+// 	// });
+// 	/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+// });
+// /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
+
+
+
+// module.exports = router;
