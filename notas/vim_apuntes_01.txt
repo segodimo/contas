@@ -1,0 +1,1657 @@
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+ººº GIT
+
+<!-- para baixar nova verção no servidor -->
+git clone https://github.com/segodimo/contas.git
+
+git config --global user.name "segodimo"
+git config --global user.email "segodimo@gmail.com"
+
+<!-- iniciar nuevo git -->
+git init
+/*+++++++++++++++++++*/
+
+<!-- revisar novidade antes de hacer commit -->
+git status
+
+<!-- PRE-slver verção -->
+git add --all
+
+<!-- revisar todo verdinho -->
+git status
+
+<!-- revisar ultimo comit, id de todos os commit -->
+git log
+
+<!-- fazer un comit despues de add all comit con mensaje -->
+commit -m 'Agregando notas'
+commit -m 'XSXSXSXSXSXSXSXSXSXSXSX'
+
+<!-- revisar ultimo comit, id de todos os commit -->
+git log
+
+<!-- subir a github -->
+git push -u origin master
+
+<!-- se pedir a conta -->
+git remote add origin https://github.com/segodimo/contas.git
+segodimo@gmail.com
+jsbachb612
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+/*+++++++++++++++++++*/
+pwd
+mv antigo.txt novo.txt 
+rm -r apaga diretorio
+mv "old location" "new location"
+mv /home/user/my_static /home/user/static
+/*+++++++++++++++++++*/
+
+
+/*+++++++++++++++++++*/
+
+vim -O index.js routes/r_on.js routes/r_us.js
+
+set nowgrap
+set wgrap
+syntax on
+set number 
+J Join linhas
+ggVG — Seleciona tudo.
+
+Vex ........... abre o file explorer verticalmente
+Hex ........... abre o file explorer horizontalmente
+e .   ......... abre o file explorer na janela atual
+qall cerrar tudo
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+Para alterar duas janelas divididas verticalmente para dividir no horizonte
+
+Ctrl- w t Ctrl-w K
+
+Horizontalmente para verticalmente:
+
+Ctrl- w t Ctrl-w H
+
+Explicações:
+
+Ctrl- w t faz com que a primeira (topleft) janela atual Ctrl- w K mova a janela atual para largura total no topo Ctrl- w H move a janela atual para a altura total na extremidade esquerda
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+É possível dividir a janela de edição em duas, com um arquivo em uma janela e outro arquivo na outra janela.
+
+Para ativar o vim neste modo, use:
+
+  vim -o arquivo_1.txt arquivo_2.txt
+
+Este comando abre as janelas de edição na horizontal. Se preferirmos o contrário, as janelas de edição na vertical, devemos fazer:
+
+  vim -O arquivo_1.txt arquivo_2.txt
+
+A diferença é a diretiva -o ou -O (letra o grafada em minúsculo e maiúsculo.
+
+Uma vez aberto o editor com os dois arquivos, para alternar entre uma janela e outra, digite <CTRL> w w (pressione a tecla <CTRL> e em seguida a tecla w duas vezes).
+
+É um recurso extremamente útil, especialmente para quem precisa realizar alterações em um arquivo e ao mesmo tempo confrontá-lo com o arquivo original.
+
+Na verdade voce pode editar quantos arquivos quiser desta forma. Eu forneci o nome de dois arquivos, mas voce pode especificar quantos desejar:
+
+  vim -o a b c d e f g h
+
+irá abrir 8 janelas de edição. Mas isto é para quem é realmente multitarefa. Eu fico só nas duas mesmo :-)
+
+
+
+
+Para dividir a tela horizontalmente usa-se o comando
+
+  :split [nome-do-arquivo]
+
+e verticalmente
+
+  :vertical <new | nome-do-arquivo>
+
+No ":split" o nome do arquivo é facultativo, e caso não seja indicado será criada uma janela vazia. Para criar uma janela vazia com o ":vertical", é necessário o parâmetro "new".
+
+Esses comandos podem redividir as janelas sucessivamente, permitindo assim que sejam editados muitos arquivos simultaneamente. As janelas interagem entre si. Desta forma, pode-se usar comando de copiar linhas ("[quantidade-de-linhas]yy") em uma e colar em outra usando o comando "p" ou "P".
+
+O comando "ctrl-w" é o grande todo-poderoso para edição com várias janelas. Seguem algumas coisas que podem ser feitas com ele.
+
+  ctrl+w h  mover cursor para a janela a esquerda
+  ctrl+w j  mover cursor para a janela abaixo
+  ctrl+w k  mover cursor para a janela acima
+  ctrl+w l  mover cursor para a janela a direita
+  ctrl+w t  mover cursor para a janela mais ao topo (top)
+  ctrl+w b  mover cursor para a janela mais abaixo (bottom)
+  ctrl+w w  alternar entre janelas
+  ctrl+w K  mover janela corrente para o topo
+  ctrl+w H  mover janela corrente para a extrema esquerda
+  ctrl+w J  mover janela corrente para o rodapé
+  ctrl+w L  mover janela corrente para a extrema direita
+  ctrl+w +  aumenta altura da janela corrente
+  ctrl+w -  diminui altura da janela corrente
+  ctrl+w _  precedido por um valor numérico, define a altura da janela corrente
+
+Alguns comandos são válidos para todas as janelas.
+
+  :qall   abandona tudo
+  :wall   salva tudo
+  :wqall  salva e abandona tudo
+  :xall   salva e abandona tudo
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+Dividindo a janela
+Observação: CTRL = ^
+
+CTRL + w + s   Divide a janela atual em duas (:split)
+CTRL + w + o   Faz a janela atual ser a única (:only)
+Caso tenha duas janelas e use o atalho acima ^wo lembre-se de salvar tudo ao fechar, pois apesar de a outra janela estar fechada o arquivo ainda estará carregado, portanto faça:
+
+ :wall ......... salva todos 'write all'
+ :qall ......... fecha todos 'quite all'
+Abrindo e fechando janelas
+CTRL + w + n   Abre uma nova janela, sobrepondo a atual (:new)
+CTRL + w + q   Fecha a janela atual, e termina após a última (:quit)
+CTRL + w + c   Fecha a janela atual (:close)
+Manipulando janelas
+CTRL + w + w	Alterna entre janelas (salta de uma para outra)
+CTRL + w + j   desce uma janela j
+CTTL + w + k   sobe  uma janela k
+CTRL + w + r   Rotaciona janelas na tela
+CTRL + w + +	Aumenta o espaço da janela atual (observe que o W é minúsculo)
+CTRL + w + -	Diminui o espaço da janela atual (observe que o W é minúsculo)
+File Explorer
+Para abrir o gerenciador de arquivos do vim use:
+
+ :Vex ........... abre o file explorer verticalmente
+ :e .   ......... abre o file explorer na janela atual
+ após abrir chame a ajuda <F1>
+Para abrir o arquivo sob o cursor em nova janela coloque a linha abaixo no seu ~/.vimrc
+
+ let g:netrw_altv = 1
+Caso queira pode mapear um atalho "no caso abaixo F2" para abrir o File Explorer.
+
+ map <F2> <esc>:Vex<cr>
+Maiores informações:
+
+:help buffers
+:help windows
+Dicas
+Caso esteja editando um arquivo e nele houver referência a outro arquivo tipo:
+
+ /etc/hosts
+Você pode usar este comando para abrir uma nova janela com o arquivo citado
+
+ Control-w-f
+Mas lembre-se que posicionar o cursor sobre o nome do arquivo
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+Comando	Ação
+:set nowgrap
+:set wgrap
+
+Comando	Ação
+gg	Pula para a primeira linha
+G	Pula para a última linha
+:44	Pula para a linha número 44
+{	Pula para o parágrafo anterior
+}	Pula para o próximo parágrafo
+(	Pula para a frase anterior
+)	Pula para a próxima frase
+0	Pula para o início da linha atual
+$	Pula para o fim da linha atual
+``	Desfaz o pulo, volta
+
+Comando	Ação
+dgg	Apaga até o início do arquivo
+d0	Apaga até o início da linha atual
+dw	Apaga a palavra
+d4b	Apaga as quatro palavras anteriores
+df.	Apaga até o próximo ponto
+d)	Apaga até o fim da frase
+
+Comando	Nome	Ação
+v	-- VISUAL --	Seleciona caracteres
+V	-- VISUAL LINE --	Seleciona linhas
+Ctrl+V	-- VISUAL BLOCK --	Seleciona blocos (seleção vertical)
+
+Comando	Ação no texto selecionado
+d	Apaga
+y	Copia
+p	Cola
+c	Troca por outro texto
+r	Troca cada letra por um caractere
+J	Junta todas as linhas em uma só
+U	Converte para maiúsculas
+u	Converte para minúsculas
+~	Inverte maiúsculas e minúsculas
+gq	Reformata as linhas para a largura desejada
+!	Manda as linhas para um comando externo (!sort)
+:	Aplica um comando 'ex' nas linhas (:s/isso/aquilo/)
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+VIM - CARTÃO DE REFERÊNCIA 
+===========================
+
+
+Movimentos básicos 
+------------------
+
+
+h l k j . . . . . . . . . caracter esq., dir., linha acima, abaixo 
+b w . . . . . . . . . . . palavra/token esquerda, direita 
+ge e  . . . . . . . . . . fim palavra/token esquerda, direita 
+{ } . . . . . . . . . . . começo parágrafo anterior, posterior 
+( ) . . . . . . . . . . . começo sentença anterior, posterior 
+0 gm  . . . . . . . . . . começo, meio da linha 
+^ $ . . . . . . . . . . . primeiro, último caracter da linha 
+nG ngg  . . . . . . . . . linha n, padrão o último, primeiro 
+n%  . . . . . . . . . . . porcentagem n do arquivo (n deve existir)
+n|  . . . . . . . . . . . coluna n da linha atual 
+% . . . . . . . . . . . . acha próximo parêntese, colchete, coment., #define 
+nH nL . . . . . . . . . . linha n do topo, base da janela 
+M . . . . . . . . . . . . linha do meio da janela
+
+Inserção & substituição ! modo insert 
+-------------------------------------
+
+i a . . . . . . . . . . . insere antes, depois do cursor 
+I A . . . . . . . . . . . insere no início, fim da linha 
+gi  . . . . . . . . . . . insere texto na última posição de iserção  
+gI  . . . . . . . . . . . insere texto na primeira coluna 
+o O . . . . . . . . . . . abre nova linha abaixo, acima da linha atual 
+rc  . . . . . . . . . . . substitui caracter sob cursor por c 
+grc . . . . . . . . . . . como r, mas sem afetar o layout 
+R   . . . . . . . . . . . substitui caracteres começando do cursor 
+gR  . . . . . . . . . . . como R, mas sem afetar o layout 
+cm  . . . . . . . . . . . muda texto do comando de movimento m 
+cc ou S . . . . . . . . . muda linha atual 
+C . . . . . . . . . . . . muda até o fim da linha 
+s . . . . . . . . . . . . muda um caracter e insere 
+~ . . . . . . . . . . . . muda maiúsc./minúsc. e avança cursor 
+g~m . . . . . . . . . . . muda maiúsc./minúsc. do movimento m
+gum gUm . . . . . . . . . texto do movim. m minúsculo, maiúsculo
+<m >m . . . . . . . . . . desloca esq., dir. texto do movimento m 
+n<< n>> . . . . . . . . . desloca n linhas esquerda, direita
+
+
+Eliminação
+----------
+
+x X . . . . . . . . . . . apaga caracter sob, antes do cursor
+dm  . . . . . . . . . . . apaga texto do comando movimento m
+dd D  . . . . . . . . . . apaga linha atual, até fim da linha
+J gJ  . . . . . . . . . . junta linha atual com próxima, sem espaço
+:rd [Enter] . . . . . . . apaga r linhas
+:rdx [Enter]  . . . . . . apaga r linhas, põe registrador x
+xp  . . . . . . . . . . . iverte posicionamento de caracteres           
+dl  . . . . . . . . . . . deleta um caracter sobre o cursor             
+diB . . . . . . . . . . . deleta interior de {}                         
+daB . . . . . . . . . . . deleta interior de {} e {}                    
+dib . . . . . . . . . . . deleta interior de ()                         
+dab . . . . . . . . . . . deleta interior de () e ()                    
+
+b  . . . . . . . . . . . ()                                              
+B  . . . . . . . . . . . {}                                              
+i  . . . . . . . . . . . inner interior                                  
+a  . . . . . . . . . . . all tudo                        
+
+
+
+
+
+Caracteres especiais em padrões de busca
+----------------------------------------
+
+. ^ $ . . . . . . . . . . qualquer caracter, começo, fim de linha
+\< \> . . . . . . . . . . início, fim de linha
+[c1-c2] . . . . . . . . . um caracter na faixa c1..c2
+[^c1-c2]. . . . . . . . . um caracter fora da faixa
+\i \I . . . . . . . . . . um identificador, excluindo dígitos
+\k \K . . . . . . . . . . uma palavra-chave, excluindo dígitos
+\f \F . . . . . . . . . . um nome de arquivo, excluindo dígitos
+\p \P . . . . . . . . . . um caracter imprimível, excluindo dígitos
+\s \S . . . . . . . . . . um espaço em branco, um espaço não-branco
+\e \t \r \b . . . . . . . <esc>, <tab>, [Enter], <bs> 
+\= * \+ . . . . . . . . . combina 0..1, 0..inf, 1..inf de átomos preced.
+\|  . . . . . . . . . . . separa dois ramos (or = ou lógico)
+\( \) . . . . . . . . . . agrupa padrões em um átomo
+
+
+Deslocamentos em comandos de busca
+----------------------------------
+
+n ou +n . . . . . . . . . linha n abaixo na coluna 1
+-n  . . . . . . . . . . . linha n acima na coluna 1
+e+n e-n . . . . . . . . . n caracteres a dir., esq. do fim da combin.
+s+n s-n . . . . . . . . . n caracteres a dir., esq. do começo combin.
+;sc . . . . . . . . . . . executa comando de busca sc próximo
+
+
+
+
+Marcas e movimentos
+-------------------
+
+mc  . . . . . . . . . . . marca posição atual com marca c 2 [a..Z]
+'c 'C . . . . . . . . . . vai para marca c no arquivo atual, C em qualquer arq.
+'0..9 . . . . . . . . . . vai para última posição
+'' '" . . . . . . . . . . vai para posição antes salto, na última edição
+'[ '] . . . . . . . . . . vai para começo, fim texto operado anterior
+:marks [Enter]  . . . . . mostra lista de marcas ativas
+:jumps [Enter]  . . . . . mostra lista de saltos
+n^O . . . . . . . . . . . vai para n° posição mais velha na lista saltos
+n^I . . . . . . . . . . . vai para n° posição mais nova na lista saltos
+
+
+
+
+Mapeamento de teclas & abreviaçõoes
+-------------------------------------
+
+:map c e [Enter]  . . . . mapeia c ->  e em modo normal & visual
+:map! c e [Enter] . . . . mapeia c -> e em modo & linha-cmd
+:unmap c [Enter]:unmap! c [Enter] . . . . . . remove mapeamento c
+:mk f [Enter] . . . . . . escreve mapeamentos, ajustes... atuais no arquivo f
+:ab c e [Enter] . . . . . adiciona abreviação para c -> e
+:ab c  [Enter]. . . . . . mostra abreviação começando com c
+:una c [Enter]. . . . . . remove abreviação c
+
+
+
+Modo Inserção
+-------------
+
+^Vc ^Vn . . . . . . . . . insere caracter c literalmente, valor decimal n
+^A  . . . . . . . . . . . insere texto inserido anteriormente
+^@  . . . . . . . . . . . mesmo que ^A e pára insert -> modo comando
+^Rx ^R^Rx . . . . . . . . insere conteúdo registrador x, literalmente
+^N ^P . . . . . . . . . . completa texto antes, depois do cursor
+^W  . . . . . . . . . . . apaga palavra antes do cursor
+^U  . . . . . . . . . . . apaga todos caracteres inseridos linha atual
+^D ^T . . . . . . . . . . desloca esquerda, direita largura 1 desloc.
+^Kc1c2 ou c1 <- c2  . . . entra dígrafo {c1, c2} 
+^Oc . . . . . . . . . . . executa c em modo comando temporário
+^X^E ^X^Y . . . . . . . . rola acima, abaixo
+<esc> ou ^[ . . . . . . . abandona edição ! modo comando
+
+
+
+
+Copiando
+--------
+
+"x  . . . . . . . . . . . usa registrador x para próximo delete, yank, put
+:reg  [Enter] . . . . . . mostra o conteúdo de todos os registradores
+:reg x [Enter]  . . . . . mostra conteúdo dos registradores x
+ym  . . . . . . . . . . . copia texto do comando de movimento m
+yy ou Y . . . . . . . . . copia texto da linha atual no registrador
+p P . . . . . . . . . . . cola registrador depois, antes da posição cursor
+]p [p . . . . . . . . . . como p, P com recuo ajustado
+gp gP . . . . . . . . . . como p, P deixando cursor depois texto novo
+^e  . . . . . . . . . . . copia a linha abaixo na linha atual (- insert mode -) 
+
+
+
+Inserção Avançada
+-----------------
+
+
+g?m . . . . . . . . . . . faz codificação rot13 no movimento m
+n^A n^X . . . . . . . . . +n, -n no número sob o cursor
+gqm . . . . . . . . . . . formata linhas do mov. m com largura fixada
+:rce w [Enter]  . . . . . centra linhas na faixa r para largura w
+:rle i [Enter]  . . . . . alinha esq. linhas na faixa r com recuo i
+:rri w [Enter]  . . . . . alinha dir. linhas na faixa r para largura w
+!mc [Enter] . . . . . . . filtra linhas do mov. m através comando c
+n!!c [Enter]  . . . . . . filtra n linhas através do comando c
+:r!c [Enter]  . . . . . . filtra faixa de r linhas através do comando c
+
+
+
+Modo Visual
+-----------
+
+
+v V ^V  . . . . . . . . . começa/pára destaque caract., linhas, bloco
+o . . . . . . . . . . . . troca posição do cursor com início do destaque
+gv  . . . . . . . . . . . inicia destaque na area visual anterior
+aw as ap  . . . . . . . . seleciona uma palavra, sentença, parágrafo
+ab aB . . . . . . . . . . seleciona um bloco ( ), um bloco { }
+
+
+
+Tags
+----
+
+
+:ta t[Enter]  . . . . . . pula para tag t
+:nta[Enter] . . . . . . . pula para na tag mais nova na lista
+^] ^T . . . . . . . . . . pula para tag sob cursor, retorna da tag
+:ts t[Enter]  . . . . . . lista tags que comb. e seleciona uma p/ pular
+:tj t[Enter]  . . . . . . pula para tag ou seleciona uma se várias
+:tags[Enter]  . . . . . . mostra lista de tags
+:npo[Enter] :n^T[Enter] . pula atrás de, para na tag antiga
+:tl[Enter]  . . . . . . . pula para última tag que combina
+^W} :pt t[Enter]  . . . . prevê tag sob cursor, tag t
+^W] . . . . . . . . . . . divide janela e mostra tag sob cursor
+^Wz ou :pc[Enter] . . . . fecha janela visualização tag
+
+
+Rolagem & multi-janela
+----------------------
+
+
+^E ^Y . . . . . . . . . . rola linha acima, abaixo
+^D ^U . . . . . . . . . . rola meia página acima, abaixo
+^F ^B . . . . . . . . . . rola página acima, abaixo
+zt ou z[Enter]  . . . . . põe linha atual topo da janela
+zz ou z . . . . . . . . . põe linha atual centro da janela
+zb ou z-  . . . . . . . . põe linha atual base da janela
+zh zl . . . . . . . . . . rola um caracter a direita, esquerda
+zH zL . . . . . . . . . . rola meia tela a direita, esquerda
+^Ws ou :split[Enter]  . . divide janela em duas
+^Wv ou :vsplit[Enter] . . divide janela em duas
+^Wn ou :new[Enter]  . . . cria nova janela vazia
+^Wo ou :on[Enter] . . . . coloca janela atua em uma tela
+^Wj ^Wk . . . . . . . . . move para janela abaixo, acima
+^Ww ^W^W. . . . . . . . . move para janela abaixo, acima (troca)
+
+
+
+
+
+Comandos Ex ([Enter])
+---------------------
+
+
+:e f  . . . . . . . . . . edita arquivo f, a menos que modificado
+:e! f . . . . . . . . . . edita arq. f sempre (por padrão relê atual)
+:wn :wN . . . . . . . . . grava arquivo e edita próximo, anterior
+:n :N . . . . . . . . . . edita arquivo seguinte, anterior na lista
+:rw . . . . . . . . . . . grava faixa r no arquivo atual
+:rw f . . . . . . . . . . grava faixa r no arquivo f
+:rw>>f  . . . . . . . . . adiciona faixa r no arquivo f
+:q :q!  . . . . . . . . . sai e confirma, sai e descarta mudanças
+:wq ou :x ou ZZ . . . . . grava no arquivo atual e sai
+<up> <down> . . . . . . . chama comandos começando com atual
+:r f  . . . . . . . . . . insere conteúdo do arquivo f abaixo cursor
+:r! c . . . . . . . . . . insere saída comando c abaixo cursor
+:all. . . . . . . . . . . abre janela para cada arquivo na lista argtos.
+:args . . . . . . . . . . mostra a lista de argumentos
+
+
+
+
+
+Comandos desfazer & repetir
+---------------------------
+
+
+u U . . . . . . . . . . . desfaz último cmd, restaura última linha mudada
+. ^R  . . . . . . . . . . repete últimas mudanças, refaz último desfazer
+n.(ponto) . . . . . . . . repete últimas mudanças com cont. trocado por n
+qc qC . . . . . . . . . . grava, anexa caracteres digitados no regist. c
+q   . . . . . . . . . . . pára de gravar
+@c  . . . . . . . . . . . executa o conteúdo do registrador c
+@@  . . . . . . . . . . . repete comando @ anterior
+:@c [Enter] . . . . . . . executa registrador c como comando Ex
+:rg/p/c [Enter] . . . . . executa comando Ex c na faixa r
+                         [onde padrão p combinar]
+
+
+Movimentos Complexos
+--------------------
+
+
+- + . . . . . . . . . . . linha acima/abaixo no 1° caracter não-branco
+B W . . . . . . . . . . . palavra separada por espaço a esq., a dir.
+gE E  . . . . . . . . . . fim de palavra separada por espaço a esq., a dir.
+n . . . . . . . . . . . . desce n - 1 linhas no 1° caracter não-branco
+g0  . . . . . . . . . . . início da linha screen
+g^ g$ . . . . . . . . . . primeiro, último caracter da linha screen
+gk gj . . . . . . . . . . linha screen acima, abaixo
+fc Fc . . . . . . . . . . ocorrência seguinte, anterior do caracter c
+tc Tc . . . . . . . . . . antes da ocorrência seguinte, anterior de c
+; , . . . . . . . . . . . repete último fFtT, na direção oposta
+[[ ]] . . . . . . . . . . começo de seção atrás, a frente
+[] ][ . . . . . . . . . . fim de seção atrás, a frente
+[( ]) . . . . . . . . . . (, ) não fechado atrás, a frente
+[{ [} . . . . . . . . . . {, } não fechado atrás, a frente
+[m ]m . . . . . . . . . . começo, fim de java method atrás, a frente
+[# ]# . . . . . . . . . . #if, #else, #endif não fechado atrás, a frente
+[* ]* . . . . . . . . . . começo, fim de /* */ atrás, a frente
+
+
+
+
+
+Busca & substituição
+-----------------------
+
+
+/s [Enter] ?s [Enter] . . procura a frente, atrás por s
+/s/o [Enter] ?s?o [Enter] . . .procura s atrás, frente com desloc. o
+n ou / [Enter]  . . . . . repete última busca a frente
+N ou ? [Enter]  . . . . . repete última busca atrás
+# * . . . . . . . . . . . procura atrás, a frente palavra sob o cursor
+g# g* . . . . . . . . . . o mesmo, mas busca também parcial
+gd gD . . . . . . . . . . definição local, global de símbolo sob cursor
+:rs/f/t/x [Enter] . . . . substitui f por t na faixa r
+        [x : g-todas as ocorrências, c-confirma mudanças]
+:rs x [Enter] . . . . . . repete substituição com novos r &
+
+
+
+
+Faixas Ex
+---------
+
+
+, ; . . . . . . . . . . . separa dois números linhas, def. para 1a linha
+n . . . . . . . . . . . . um número de linha n absoluto
+. $ . . . . . . . . . . . linha atual, última linha no arquivo
+% * . . . . . . . . . . . arquivo todo, area visual
+'t  . . . . . . . . . . . posição da marca t
+/p/ ?p? . . . . . . . . . linha seguinte, anterior onde p combina
++n -n . . . . . . . . . . +n, -n até número linha precedente
+
+
+
+
+Miscelânea
+----------
+
+
+:sh [Enter] :!c [Enter] . começa shell, executa cmdo. c em shell
+K . . . . . . . . . . . . procura palavra[Enter]chave sob cursor com man
+:make [Enter] . . . . . . começa make, lê erros e vai ao primeiro
+:cn [Enter] :cp [Enter] . mostra erro seguinte, anterior
+:cl [Enter] :cf [Enter] . lista erros, lê erros do arquivo
+^L ^G . . . . . . . . . . redesenha tela, mostra nome arquivo e posição
+g^G . . . . . . . . . . . mostra coluna cursor, linha e posição caracter
+ga  . . . . . . . . . . . mostra valor ASCII do caracter sob cursor
+gf  . . . . . . . . . . . abre arquivo cujo nome está sob cursor
+:redir>f [Enter]  . . . . redireciona saída para arquivo f
+^@ ^K ^_ \  . . . . . . . teclas sem uso, disponíveis para mape
+q:  . . . . . . . . . . . edita o histórico da linha de comandos  
+q?  . . . . . . . . . . . edita o histórico de pesquisa 
+q/  . . . . . . . . . . . edita o histórico de pesquisa 
+
+
+)  n)              move o cursor para o início da próxima frase adjacente
+(  n(              move o cursor para o início da frase anterior adjacente
+}  n}              move o cursor para o início do próximo parágrafo adjacente
+{  n{              move o cursor para o início do parágrafo anterior adjacente
+
+d)  nd)            deleta a próxima frase adjacente
+d}  nd}            deleta o próximo parágrafo adjacente
+d(  nd(            deleta a frase anterior adjacente
+d{  nd{            deleta o parágrafo anterior adjacente
+
+dfc dnfc  delete o texto até encontrar o primeiro caracter c após
+          a posição inicial do cursr, incluindo o caracter
+
+dFc dnFc  delete o texto até encontrar o primeiro caracter c
+          anterior a posição inicial do cursr, incluindo o caracter
+
+dtc dntc  delete o texto até encontrar o primeiro caracter c após a
+          posição inicial do cursr, excluindo o caracter
+
+dTc dnTc  delete o texto até encontrar o primeiro caracter c
+          anterior a posição inicial do cursr, excluindo o caracter
+
+d/pattern<ret> delete text from current pos to first occurrence
+					of text matching pattern forward to EOF (not attern ). If
+					search wraps to BOF before matched, deletion begins with
+					pattern t is removed up to, but not including, sor pos.
+
+d?pattern<ret> delete text from current pos to first occurrence of
+					text matching pattern backward to BOF (including excluding
+					cursor pos). If search o EOF before pattern is matched,
+					deletion current pos and continue up to, but ding, the matching
+					pattern
+
+
+
+ O comando append
+ ----------------
+ 
+  Um recurso muito interessante para adicionar texto
+  na linha ln+1 é utilizar o comando append
+  onde basta você especificar `ln` linha e  escrever
+  a menssagem a ser inserida em seguida
+  do comando
+    :ln append
+    \menssagem
+    .
+
+
+ atenção pois o ponto incerra o comando
+
+
+O comando insert
+----------------
+  Um recurso muito interessante para adicionar texto
+  na linha ln   é utilizar o comando insert
+  onde basta você especificar `ln` linha e  escrever
+  a menssagem a ser inserida em seguida
+  do comando
+    :ln insert
+    \menssagem
+    .
+ atenção pois o ponto incerra o comando
+
+
+=============================================================================
+# vim:tw=78:ts=3:ft=help:norl:
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+Mais comandos a serem usados no Vim
+:e — Abrir um arquivo.
+A Sintaxe eh :e /root/teste.sh
+:sp — Abrir em outra janela.
+A Sintaxe pode ser :sp somente ou :sp /root/teste.sh
+:enew — Novo documento.
+A sintaxe eh :enew
+:sav — Salvar como.
+A sintaxe eh : sav nomedoarquivo.txt
+u — Serve para Desfazer / Refazer.
+A sintaxe e " u " sem aspas, quando voce fizer uma coisa errada
+. — Serve para repetir.
+A Sintaxe eh apenas " . " sem aspas.
+[p — Serve para colar antes.
+o comando eh simplesmente [p
+]p — Server para colar depois.
+o comando eh simplesmente ]p
+ggVG — Seleciona tudo.
+Para quem tem saudades do windows esse comando seleciona tudo visualmente. A sintaxe é somente ggVG.
+"+x — Serve para recortar.
+A sintaxe eh escrita com da forma a cima (Aspa dupla)+(Sinal de mais)+(x).
+"+y — Serve para colocar .
+A sintaxe eh escrita com da forma a cima (Aspa dupla)+(Sinal de mais)+(y).
+:wqa — Serve para salvar e sair.
+A sintaxe eh :wqa
+:qa — Serve para sair somente.
+A sintaxe eh :qa
+x — Serve para deletar
+O comando para deletar eh somente " x " sem as aspas.
+:set hls! — Serve para Ativar / Desativar Realce de padroes
+A sintaxe eh :set hls!
+:set ic! — Serve para Ativar / Desativar ignorar as letras maiusculas
+A sintaxe eh :set ic!
+:set sm! — Serve para Ativar / Desativar as coincidencias
+A sintaxe eh :set sm!
+:set cp! — Serve para Ativar / Desativar compatibilidade com o Vi
+A sintaxe é :set cp!
+:set nu! — Essa particularmente eu acho massa, ativar a numeracao de linhas
+A sintaxe é :set nu!
+:set list! — Serve para Ativar / Desativar modo list
+A sintaxe é :set list!
+:set wrap! — Serve para Ativar / Desativar quebra de linhas
+A sintaxe é :set wrap!
+:set lbr! — Serve para Ativar / Desativar quebra na palavra
+A sintaxe é :set lbr!
+:set ai! — Essa eu tambem acho muito legal, esse comando ativa a auto-indentacao
+A sintaxe é :set ai!
+g^] — Pula para esta tag
+A sintaxe eh g^]
+^T — Voltar
+A sintaxe eh ^T
+zi — Ativar / Desativar dobras
+A sintaxe eh somente zi
+zv — Ver linha do cursor
+A sintaxe eh somente zv
+zMzx — Ver somente a linha do cursor
+A sintaxe eh somente zMzx
+zm — Fechar mais dobras
+A sintaxe eh somente zm
+zM — Fechar todas as dobras
+A sintaxe eh somente zM
+zr — Abrir mais dobras
+A sintaxe eh somente zr
+zR — Abrir todas as dobras
+A sintaxe eh somente zR
+zd — Remover dobras
+A sintaxe eh somente zd
+zD — Remover todas as dobras
+A sintaxe eh somente zD
+:make — Make
+A sintaxe eh :make
+:cl — Lista de erros
+A sintaxe eh somente :cl
+:cl! — Lista de mensagens
+A sintaxe eh :cl!
+:cn — Proximo erro
+A sintaxe eh :cn
+:cold — Listar erros antigos
+A sintaxe eh somente :cold
+:cnew — Listar erros novos
+A sintaxe eh eh :cnew
+Janelas de erro
+:cwin — Atualiza
+
+:copen — Abrir
+
+:cclose — Fechar
+
+Conversao para hexadecimal
+:%!xxd — converte para hexadecimal
+
+:%!xxd -r — converte para decimal
+
+Definicoes de Janelas
+^Wn	Nova Janela
+^Wn	Dividir a Janela
+^Wn^^	Dividir para #
+^Wv	Dividir verticalmente
+^Wc	Fechar
+^Wo	Fechar outra(s)
+^WR	Girar para cima
+^Wr	Girar para baixo
+^W=	Mesmo Tamanho
+^W_	Altura Maxima
+^W1_	Altura Minima
+^W|	Largura Maxima
+^W1|	Largura Minima
+^WK	Mover para cima
+^WJ	Mover para Baixo
+^WH	Mover para esquerda
+^WL	Mover para Direita
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+v i m   b á s i c o       por Aurélio Marinho Jargas
+- - -   - - - - - -
+
+
+INTRODUÇÃO:
+----------
+
+No vim temos vários "modos", que são estados do editor.
+São eles:
+
+Modo               Tecla   Rodapé          Descrição 
+---------------------------------------------------------------------------  
+de Inserção        i       -- INSERT --    Inserção de texto
+de Comandos        <ESC>                   Comandos de manipulação de texto
+Linha de comando   :       :               Comandos de manipulação arquivo 
+Visual             v       -- VISUAL --    Seleção visual de texto
+Busca              /       /               Busca de padrões no texto
+Reposição          R       -- REPLACE --   Inserção sobreescrevendo
+
+
+* Os modos foram colocados em ordem de importância de uso da grande maioria
+  dos usuários.
+* Para acessar qualquer um desses modos, na dúvida aperte <ESC> antes da
+  sua tecla de acesso (2ª coluna da tabela)
+* Para identificar em qual modo você está, olhe no rodapé da tela! (3ª
+  coluna da tabela)
+
+
+
+CHAMANDO O VIM:
+--------------
+vi                      Abre o vim vazio, sem arquivo (muito pouco usado)
+vi arquivo              Abre o arquivo "arquivo". Se ele não existir, o cria
+
+vi arquivo +            Abre com cursor no fim do arquivo
+vi arquivo +10          Abre com cursor na linha 10
+vi arquivo +/linux      Abre com cursor na 1ª ocorrência de "linux"
+
+
+
+SALVANDO/SAINDO DO VIM:
+----------------------
+
+<F12>     Saída forçada, salva e sai (Se usar o .vimrc do aurélio  &:)  )
+
+Obs.: Antes de executar os comandos seguintes, aperte <ESC> para ir
+      ao modo de comandos, e é claro, após, um <ENTER>
+
+:w                Salva
+:q                Sai
+:wq ou :x ou ZZ   Salva e sai
+:w!               Salva forçado
+:q!               Sai forçado
+:wq!              Salva e sai forçado
+
+
+
+EDITANDO:
+--------
+
+Ao entrar no vim, ele está no modo de comandos. Como saber? Olhe no rodapé
+da tela. Nada na última linha.
+
+Para começar a Inserir um texto, aperte "i". Você verá que aparecerá um
+"-- INSERT --" no rodapé. Agora você pode digitar seu texto normalmente.
+
+Quer parar para dar uma gravada? Veja o tópico acima. ( <ESC>:w )
+chega de editar e quer salvar e sair? Veja acima de novo. ( <ESC>:wq )
+
+
+
+COPIANDO e COLANDO:
+------------------
+
+*** Usando o mouse:
+
+No modo de Inserção mesmo, note que o cursor do teclado (esse tracinho
+piscando na tela), está numa posição, e o cursor do mouse (mexa o mouse
+para que ele se mova) está em outra posição.
+
+Selecione uma parte do texto com o mouse, segurando o botão esquerdo.
+
+Ao colar, o texto selecionado com o MOUSE será colocado a partir do
+cursor do TECLADO. Experimente. Dependendo do mouse, a colagem se faz:
+
+- Apertando o botão direito
+- Segurando o botão esquerdo e apertando o direito ao mesmo tempo
+- Apertando o botão do meio (mouse de 3 botões)
+
+Tente, o seu será umas das 3 alternativas acima.
+
+
+*** Usando o modo visual:
+
+Entre no modo visual ( <ESC>v ), e simplesmente aperte as setas do
+teclado, movendo o cursor do TECLADO e selecionando o texto desejado. O
+comando para copiar o texto é o "y" de Yank.
+
+Volte para o modo de comandos ( <ESC> ) e posicione o cursor do TECLADO
+no lugar onde você quer colar o texto selecionado. O comando de colagem
+é o "p" de Paste.
+
+
+
+APAGANDO (DELETANDO):
+--------------------
+
+Como no tópico anterior, use o modo visual ( <ESC>v ) para selecionar o
+texto desejado. Para apagá-lo, digite "d", de Delete.
+
+Com o linux no modo texto, a tecla Delete do teclado também funciona para
+apagar texto. Já no X, isso é meio relativo...  &:)
+
+
+
+T U T O R I A L
+---------------
+http://www.networkcomputing.com/unixworld/tutorial/009/009.part1.html
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+v i m   m é d i o       por Aurélio Marinho Jargas
+- - -   - - - - -
+
+
+SUBSTITUIÇÕES:
+-------------
+
+:s/velho/novo           substitua a 1a ocorrência de velho por novo na linha
+                        corrente
+:% s/velho/novo/        substitua em todo o arquivo (%) a 1a ocorrência
+                        de velho por novo em cada linha
+:% s/velho/novo/g       substitua em todo o arquivo (%), todas (g) as
+                        ocorrências de velho por novo
+:% s/velho/novo/gc      igual ao anterior, mas pedindo confirmação para cada
+                        substituição
+:% s/^String[0-9]//gc   expressões regulares também funcionam, igual ao sed
+:% s/./\u&/gc           converta para maiúsculas (\u) o 1o caracter (.) de
+                        cada linha (exclusiva vi/perl, no sed não funciona)
+
+
+ABREVIAÇÕES:
+-----------
+:ab                     mostra todas as abbr
+:abc[lear]              tira todos
+:iab                    apenas p/modo inserção
+:iabc[lear]             tira todos de inserção
+:cab                    apenas p/modo de comando ( : )
+:cabc[lear]             tira todos modo comando
+:una vc                 tira ab para vc
+
+obs.: pontuação, espaço ou o ENTER, disparam a expansão de uma abreviação.
+      mas o Ctrl+] também pode ser usado, para expandir sem adicionar
+      caracteres.
+
+
+OPÇÕES DO SET:
+-------------
+
+:set 
+autowrite      aw    salva a cada alteração
+backspace      bs    comportamento backspace(1 ou 2) 
+errorbell      eb    campainha de erro
+expandtab      et    troca tab por espacos
+fileformat=dos ff    converte o arquivo para DOS
+hidden         hid   preserva buffer
+hlsearch       hls   ilumina a última procura
+ignorecase     ic    case insensitive na busca
+incsearch      is    ilumina procura enquanto digita
+laststatus=2         mostra linha de estado
+lazyredraw     lz    não redesenha em macros
+lines=N              número de linhas na tela
+magic                usar mágicas na procura de padrões
+number         nu    mostra núm da linha
+report=N             mostra aviso quando N linhas mudaram (0=sempre)
+showcmd              mostra o comando que se está fazendo
+showmatch      sm    mostra o casamento de {},[],()
+smartcase      scs   assume "noic" quando tiver maiúsculas
+textwidth=N          quebra de linha do texto
+undolevels     ul=N  guarde os N últimos comandos p/desfazer (padrão=1000)
+vb t_vb=             retira o "beep" de erro
+
+
+
+MAIÚSCULAS/MINÚSCULAS:
+---------------------
+5~                      inverte 5 próximos
+g~$                     inverte até o fim da linha
+seleciona, u            converte p/minúsculas
+seleciona, U            converte p/maiúsculas
+seleciona, ~            inverte
+*este seleciona, é com o modo visual
+
+
+
+DEFININDO COLUNA DE QUEBRA DE LINHA:
+-----------------------------------
+
+:set textwidth=N
+
+mas, já estando num arquivo pronto:
+
+:set wm=30     (esse 30 é o número de colunas a cortar, 80-30=50 colunas)
+gq<ate aonde vc quer ir>
+
+ex.
+gqG (ate o fim do arquivo)
+gq$ (ate o fim da linha)
+ou seleciona com o modo visual e gq
+
+
+
+Ctrl+:
+-----
+modo COMANDO:
+
+A = incrementa um número                    (Add)
+X = decrementa um número                                 
+S = ScrollLock
+L = redesenha tela
+V = modo visual                             (Visual Vertical)
+G = status do arquivo
+M = início da próxima linha
+E = linha abaixo sem mover cursor
+Y = linha acima sem mover cursor
+N = próxima linha                           (Next)
+P = linha anterior                          (Previous)
+F = PageDown                                (Forward)
+B = PageUp                                  (Backyard)
+U = PageUp / 2                              (Up)
+D = PageDown / 2                            (Down)
+
+
+modo INSERÇÃO:
+
+A = insere o último texto inserido
+I = TAB
+S = ScrollLock
+H = BackSpace
+T = 2 tab's no início da linha              (Two Tabs)
+V = anula expansão do próx. caractere
+J = Enter - quebra de linha
+M = Enter - quebra de linha
+L = redesenha tela
+R = insere conteúdo do registrador [a-z]    *ver abaixo
+K = insere um dígrafo                       *ver abaixo
+N = procura palavra no texto atual          (Next)
+P = procura palavra no texto atual          (Previous)
+Y = copia caractere que está acima          (Yank)
+
+
+
+CARACTERES ESPECIAIS (DÍGRAFOS):
+-------------------------------
+ga                          mostra o código da letra sobre o cursor
+:dig                        mostra todos os dígrafos disponíveis
+ex.: para botar um ½, Ctrl+K,1,2
+
+
+
+ARQUIVOS E JANELAS MÚLTIPLOS:
+----------------------------
+:wn           grava o atual e vai ao próximo
+:wN           grava o atual e vai ao anterior
+:args         mostra todos os arquivos atuais
+:qa           sai fora de todo mundo de uma vez
+:all          abre todos os arquivos em janelas individuais
+
+Tecla chave das janelas = Crtl+W
+j, seta abaixo          move para janela abaixo 
+k, seta acima           move para janela acima 
+o                       apenas esta janela, fecha todas as outras   (Only)
++, -                    muda o tamanho da janela
+=                       deixa todas as janelas com tamanhos iguais
+
+
+
+DICAS DIVERSAS:
+--------------
+:xit                igual :wq, mas só grava se tiver sido alterado algo
+
+imprime no arquivo o próprio nome do arquivo editado qdo N_ARQ é digitado
+:map N_ARQ ^R=expand("%:t:r")^M
+
+dar dois TABs no início de cada linha:
+seleciona várias linhas, 2>
+
+macro para criar contagem
+---> i1 <ESC> qa Y p Ctrl+A q 5@a
+
+alinhamento, sim! alinhamento
+:left
+:right
+:center
+
+procurar 2 palavras ao mesmo tempo
+/palavra1\|palavra2
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+v i m    a v a n ç a d o       por Aurélio Marinho Jargas
+- - -    - - - - - - - - 
+
+
+REGISTRADORES:
+-------------
+"[a-z]        use o registrador [a-z] para o próximo delete, cópia ou cola
+:reg          mostra o conteúdo de todos os registradores
+:reg [a-z]    mostra o conteúdo do registradores [a-z]
+obs.: aqui este [a-z] na verdade pode ser: 0-9a-z%#:.-="
+
+
+
+MARCAS:
+------
+m[a-z]        marca em [a-z] a posição corrente do cursor
+`[a-z]        vai até a marca [a-z]
+``            vai até a posição anterior ao último pulo (alterna)
+:marks        mostras as marcas ativas
+
+
+
+GRAVAÇÃO DE SEQÜÊNCIAS DE COMANDOS:
+----------------------------------
+
+q[a-z]        inicia a gravação de uma seqüência no registrador [a-z]
+q[A-Z]        inicia a gravação, adicionando no registrador [a-z]
+q             pára a gravação
+@[a-z]        executa a seqüência do registrador [a-z]  (5 vezes? 5@a)
+
+dica: pode-se colocar o @[a-z] dentro da própria gravação do q[a-z]!
+      assim ele é executado recursivamente. muito útil quando há uma
+	  procura de padrões na gravação. faz para todas as ocorrências.
+
+
+
+MAPEAMENTOS:
+-----------
+
+:map  <F9> <ESC>:r!date           mapeamento em modo de comando
+:imap <F9> <ESC>:r!date           mapeamento em modo de inserção
+:cmap <F9> r!date                 mapeamento em modo linha de comando
+:vmap <F9> :r!date                mapeamento em modo visual
+
+ex.:
+"html: negrito no trecho selecionado
+:vmap <F9> d`<i<b><esc>pa</b>      # html: negrito no trecho selecionado
+
+"liga/desliga autoIndent
+:map ,si :set ai!<cr>:echo "autoIndent="&ai<cr>
+
+"mostrar os espaços em branco no fim das linhas
+:map <F9> /  *$^M
+
+
+
+S I N T A X E:
+-------------
+
+Comment    = ciano
+Constant   = roxo
+Identifier = ciano
+PreProc    = azul escuro
+Special    = vermelho
+Statement  = amarelo
+String     = roxo
+Type       = verde
+
+Todo   = preto, fundo marrom
+Error  = branco, fundo vermelho
+Ignore = preto, fundo preto! - esconde
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+1. Lendo manpage
+$ man assunto | col -b | vim -
+No gvim (modo Ex)
+
+:new|read!man tar|col -b
+2. Abrir todos os arquivos que contenham uma determinada palavra
+$ vim `fgrep -l <palavra> *.ext`
+3. Mapeamento para inserir linha com repetição de char
+:map - <Esc>o<Esc>78a-<Esc>
+:let @q="*"|normal i" ^[76"qp
+4. Mapeamento para Ctrl-key
+exemplo01: mapeando a tecla Ctrl-t
+
+:map ^V^T  iOla Mundo
+exemplo02: mapeando a tecla Ctrl-a
+
+:map ^V^A  iOla Mundo
+exemplo03: mapeando a tecla Ctrl-a
+
+:map <c-a> iOla Mundo
+exemplo04: mapeando a tecla Ctrl-a
+
+:map <char-1>  iOla Mundo
+5. Filtrando comandos internos
+Exemplo01:
+
+1,10m$|g/Essas/ p
+Exemplo02: move bloco de texto para última linha do arquivo e substitui 'Essas' por 'Aquelas' dentro do bloco.
+
+1,10m$|s/Essas/Aquelas/g
+6. Contando os padrões encontrados na edição
+:let i=0|%g/{padrao}/let i=i+1
+:echo i
+7. Mapeamento
+Qual o mapeamento de <F4> ?
+
+:map <F4>
+Quais os mapeamentos dos comandos que iniciam por ; ?
+
+:map ;
+           mapea       modo     limpar          exemplo
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           map          n       unmap           map <F5> :Ex<cr>
+   +-----> map!/imap    i       unmap!          imap ff  File folder
+   |       iabb[rev]    i       una[bbreviate]  iabbr oi oiMundo
+   +-----> cmap         lc      cunmap          cmap oi echo "oi mamae"
+   |       cab          lc      cuna            cab oi  echo "Oi"
+   |       --------------------------------------------------------
+   |
+   +--------------- não é necessário <spaço> e/ou [enter] após comando.
+
+  n/c - modo normal ou modo de comando
+  i   - modo de inserção
+  lc  - modo de linha de comando
+  v   - modo visual
+  R   - Reposição
+  B   - Busca
+
+sintaxe : comando-Mapeador {key[[key]...]} {comando[s]}
+Formato define-mapeia ou mapeamento referenciado, sintaxe:
+
+nnoremap    \{nomeExterno}              {comando[s]}
+{map-modo01} {combinação-tecla[s]02}   \{nomeExterno}
+{map-modo02} {combinação-tecla[s]03}   \{nomeExterno}
+{map-modo03} {combinação-tecla[s]04}   \{nomeExterno}
+exemplo:
+
+nnoremap \key :let @m="oi gente"<cr>:put m<cr>
+nmap <F5> \key
+imap <F5> <c-o>\key
+8. Abreviacoes
+ab         - mostra todas as abreviações
+abc[lear]  - limpa todas as abreviações
+iab        - mostra todas as abreviações do modo de inserção
+iabc[lear] - limpa todas as abreviações do modo de inserção
+cab        - mostra todas as abreviações do modo de comando
+cabc[lear] - limpa todas as abreviações do modo de comand
+9. Movimentação por links
+movimentação '{char}
+
+para linkar :<range> mark {char}
+
+10. Lendo man page ou help de programas externos
+read !man dc|col -b
+read !bc --h
+11. Convertendo formato entre janelas
+convertendo do formato horizontal para o vertical.
+
+de
+
+W|W|W
+para
+
+W
+W
+W
+:windo wincmd K
+convertendo do formato vertical para o horizontal.
+
+de
+
+W
+W
+W
+para
+
+W|W|W
+:windo wincmd H
+12. Numerando linhas selecionadas
+usando um comando linux externo:
+
+:'<,'>!cat -n
+:3,10!cat -n|tr '^I' '-'
+usando Vim-Script:
+
+com variável
+a) let  i=0|'<,'>g/^/let i=i+1|s//\=i/g
+b) let  i=0|'a,'eg/^/let i=i+1|s//\=i/g
+c) let  i=0|2,200g/^/let i=i+1|s//\=i/g
+com registro
+a) let  @s=0|'<,'>g/^/let @s=@s+1|s//\=@s/g
+b) let  @s=0|'a,'eg/^/let @s=@s+1|s//\=@s/g
+c) let  @s=0|2,200g/^/let @s=@s+1|s//\=@s/g
+com funcoes do Vim
+a) '<,'>s/^/\=(line('.') - line("'<") + 1)/g"
+b) 's,'qs/^/\=(line('.') - line("'s") + 1)/g"
+c) '20,46s/^/\=(line('.') - 20 + 1)/g"
+com minhas próprias funcoes
+a) '<,'>s/^/\=INC(1)/g"
+  +====================+====================+====================+
+  |    valor           |  :echo (valor)     | :echo strlen(valor)|
+  +====================+====================+====================+
+  | 987654321 % 10     |           1        |      1             |
+  | 987654321 % 100    |          21        |      2             |
+  | 987654321 % 1000   |         321        |      3             |
+  | 987654321 % 10000  |        4321        |      4             |
+  | 987654321 % 100000 |       54321        |      5             |
+  | 987654321 % 1000000|      654321        |      6             |
+  +--------------------+--------------------+--------------------+
+             :let c=3|let s=20|exec "normal i+^[
+".c."i".Espaco(s,'-')."+"
+              insere a linha da tabele acima
+13. invertendo linhas em arquivo
+:'<,'>g/^/m '<
+:25,67g/^/m 25
+14. Executando comando externo no modo de comando
+a)
+
+no modo de comando de linha
+
+:let @a=".!seq 5"
+executando o comando contido no registro a:
+
+@a
+b)
+
+no modo de comando de linha
+
+:let @s=":%!sort -u"
+executando o comando contido no registro s:
+
+@s
+15. Metacaracteres especiais
+  meta   exemplo              Casamentos
++~~~~~+~~~~~~~~~~~~~~~~~+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+|     |                 |
+| \@= | Buf\(Read\)\@=  | BufReadPost, BufRead, BufReadPre,BufReadPost
+|     |                 |
+|     |                 | siguinificado:casa 'Buf' se 'Buf' sucedido
+|     |                 | por 'Read'
++-----+-----------------+------------------------------------------------+
+|     |                 |
+| \@! | Buf\(Read\)\@!  | BufWritePost, BufNewFile, BufWritePre
+|     |                 |
+|     |                 | siguinificado:casa 'Buf' se 'Buf' não for
+|     |                 | sucedido por 'Read'
++~~~~~+~~~~~~~~~~~~~~~~~+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+|     |                 |
+|\@<! | \(Read\)\@<!Post| BufWritePost, FileWritePost, FileAppendPost
+|     |                 |
+|     |                 | siguinificado:casa 'Post' se 'Post' não for
+|     |                 | precedido por 'Read'
++-----+-----------------+------------------------------------------------+
+16. Capturando saída de comando externo como string
+let a=system('ls')
+echo  matchstr(system('cygpath -m /'), "^.*\\ze\n") . '/'
+echo  substitute(system('gcc -v'),'\s\+','\n','g')
+17. Comandos duplos
+indentexpr, indentexpr:
+setlocal indentexpr=GetPascalIndent()
+setlocal indentkeys+==end,=else,=type,=var,=Begin
+grepprg, grepformat:
+        setlocal grepprg=lid\ -Rgrep\ -s
+        setlocal grepformat=%f:%l:%m
+makeprg, errorformats:
+      let &l:makeprg
+     set makeprg=make\ #<.o
+     set efm=%EError\ %n,%Cline\ %l,%Ccolumn\ %c,%Z%m
+     set makeprg=latex\ \\\\nonstopmode\ \\\\input\\{$*}
+     let &mp = 'latex \\nonstopmode \\input\{$*}'
+     set makeprg=gcc\ -o\ $*\ $*
+     set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\
+]%\\@=%m
+18. Fechando blocos de código
+let  &foldmarker="if,endif"|echo &foldmarker
+19. Isere string em linha especifica
+:call setline(5,strftime("%d.%m.%Y  %X"))
+20. Isere string em linha especifica
+     :let id="valor"
+     :put =expand(id)
+
+     :let @g="Eu amo o VIM"
+     :exe 'normal 20"gp'
+     :exe "normal 200\p"
+     :exe "normal \iOi Caroline"
+     :'<,'>s/^/\='U'.Espaco(9,'k')/g
+     :'<,'>s/^/\='<'.Espaco(9,'-').'>'/g
+     :let m="<right>"|exe 'normal '.10.'i'.m
+21. Deletando
+: {linha} delete {contador}
+por exemplo
+
+: n delete 5
+irá deletar as linhas n,n+1,...,n+5
+
+22. tipos de variáveis
+aviso aos navegantes: &texwidth é o valor armazenado em texwidth
+
+   :set texwidth 78
+   :let b:a=texwidth      ERRADO
+   :let b:a=&texwidth     CERTO
+   echo (b:a)
+   78
+
+   :let &texwidth=25      CERTO
+   :set texwidth
+   45
+
+         selecione 12 < colune < 18 e linha <10
+   exe '/\%>' . '12c' . '\&.*' . '\%<18c' . '\&.*' . '\%<10l'
+23. gravando o histórico da linha de comandos em um arquivo
+$fc -l cp > ultimos-comandos vi lastcommands$ source lastcommands
+  |
+  |
+  +------ O comando fc edita o shell com seu editor preferido.
+
+  um exemplo interessante é escrever na linha de comando `fc`
+  $fc
+
+  $fc -s     -- executa o último comando editado na linha de comando
+  $fc -s gcc -- executa o último comando `gcc` editado na linha de comando
+24. salvando como
+para tanto usamos o comando w (write)
+
+exemplo:
+
+:2,8w nome_noivo_Arquivo.txt
+salvando da linha 2 a 8 no arquivo nome_noivo_Arquivo.txt
+
+exemplo2:
+
+:g/pattern/ .+2 !>> nome_noivo_Arquivo.txt
+salva as linhas que casarem com a combinaço pattern, sendo assim as mesmas 2 pontos abaixo.
+
+25. Alteração em tempo de execução
+vi -c":%s/include/Bala da GOMA/g"   max.c
+26. codificando
+map <F12> ggVGg?
+27. Folding
+Folding :
+
+   i. Folding Markers := <{ >}
+  ii. Close One Fold := zc
+ iii. Open One Fold := zv
+  iv. Open All Fold := zn
+   v. Close All Fold := zm
+Move Around :
+
+   i. First Line := :0
+  ii. Last Line := :$
+ iii. Move To Line := :XX (XX is for Line Number)
+28. para os espertos
+  nmap <c-s> :w<CR>
+  vmap <c-s> <esc><c-s>
+  imap <c-s> <esc><c-s>
+The F2 series of mappings are different; they only write if needed (performing an update) AND return you to where you were: insert mode, visual selection etc.
+
+  nmap <f2> :update<cr>
+  vmap <f2> <esc><f2>gv
+  imap <f2> <c-o><f2>
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+Como abrir múltiplas janelas no editor Vim
+O padrão do Vim é abrir apenas uma janela para o arquivo que você irá editar.
+Contudo, se houver necessidade, é possível abrir várias janelas, dentro de uma única sessão do editor, cada qual com o conteúdo de um arquivo.
+
+Neste post vou mostrar como realizar as seguintes tarefas:
+
+Abrir o Vim, já com múltiplas janelas abertas, cada qual com um arquivo.
+Dentro de uma sessão do Vim, abrir novas janelas para abrigar novos arquivos dentro.
+Se mover entre as janelas.
+Veja alguns exemplos de que trabalhar com múltiplas janelas pode facilitar sua vida:
+
+Com este recurso, é fácil aplicar a mesma formatação de um arquivo em vários outros, pois ele permite observar o modelo na mesma tela.
+Copiar e colar (inclusive através do mouse/touchpad) texto entre múltiplos arquivos.
+Manter um arquivo visível, para referência, enquanto trabalha em outro.
+Fazer comparações entre arquivos.
+Isto posto, vamos ao que interessa!
+
+Como iniciar o Vim com múltiplas janelas abertas, cada qual com um arquivo
+Você pode enfileirar arquivos, na linha de comando, para cada um abrir em uma janela própria, dentro do Vim, com o uso da opção ‘-o’
+segue um exemplo:
+
+
+vim -o arquivo1.txt arquivo2.txt
+O comando, acima, irá abrir uma sessão do Vim com uma janela ocupada por “arquivo1.txt” e outra por “arquivo2.txt”.
+Se um dos arquivos não existir, o Vim irá criar um em branco com o nome dado.
+
+Como comportamento padrão, o Vim abre os arquivos organizados horizontalmente, um sobre o outro.
+vim multiplas janelas
+
+É possível determinar também exatamente quantas janelas serão abertas, indicando um número para a opção ‘-o’:
+
+
+vim -o3 arquivo1.txt arquivo2.txt
+Neste caso, a terceira janela será aberta com um arquivo em branco (esperando conteúdo).
+
+Como ajustar os tamanhos das janelas
+Você pode alterar a altura da janela atual com o comando :set winheight=x, em que ‘x’ é o valor referente às linhas de altura que a janela passará a ter.
+Quando você altera a geometria de uma janela, o Vim, muda a das outras janelas automaticamente.
+Em um ambiente com janelas dispostas lado a lado, é possível editar a largura com o comando :set winwidth=x.
+
+Como abrir novas janelas dentro de uma sessão do Vim
+Use o comando :split para dividir a janela atual.
+A nova janela será uma cópia da atual — ou seja, tudo o que você escrever em uma, será atualizado na outra.
+Apenas experimente.
+vim split window
+
+E, se eu quiser que a nova janela fique ao lado da atual?
+Para posicionar a nova janela (clone) do lado direito da atual, use o comando :vpslit (vertical split ou divisão vertical).
+Vim vertical split
+
+Se você quiser editar um arquivo na nova janela, indique o nome dele ao lado do comando split. Por exemplo:
+
+
+:vsplit hello.c
+As opções do comando :split no Vim
+Os comandos – :split e :vsplit – aceitam algumas opções e parâmetros.
+Basicamente a sintaxe é a seguinte:
+
+:[n]split [++opt] [+cmd] [nome-do-arquivo]
+… em que:
+
+n — estabelece a quantidade de linhas (altura) da nova janela, posicionada no topo.
+opt — passa opções para o comando split, que precisam ser precedidos pelos sinais ++.
+cmd — precedido por um único sinal +, passa um comando a ser executado em relação à nova janela.
+nome-do-arquivo — especifica o nome do arquivo a ser editado dentro da nova janela.
+Veja outro exemplo:
+
+
+:vsplit ++fileformat=unix hello.c
+Abre uma janela ao lado, usando o formato UNIX de edição e dentro dela o arquivo hello.c.
+
+Você também pode usar os comandos :new e :vnew para abrir novas janelas horizontais e verticais, respectivamente.
+Os comandos ‘new’ aceitam os mesmos parâmetros dos ‘split’.
+
+Para abrir uma nova janela com um arquivo dentro, no modo read only (somente leitura), use o comando :sview nome-do-arquivo.
+
+Para fechar a janela atual, use o mesmo comando que usa para fechar um arquivo. Por exemplo, :q! (sair sem gravar) ou :wq (gravar e sair).
+
+Atalhos de teclado para dividir e criar novas janelas
+Você também pode criar/fechar janelas através de atalhos de teclado, usando a tecla Ctrl (^).
+Os atalhos de teclado do Vim, para comandos relacionados às janelas (windows) começam com ‘W’.
+Veja alguns:
+
+Ctrl + W + S — divide a janela atual. Por padrão, a nova janela clona a atual.
+Ctrl + W + N — Cria uma nova janela dentro da sessão atual, com um arquivo novo e sem nome.
+Ctrl + W + V — Faz um split vertical
+Vale ressaltar que Ctrl + Shift + W é usado para fechar a janela do GNOME-Terminal.
+Como o terminal tem prioridade, ele irá capturar esta sequência, antes do programa que está sendo executado dentro dele.
+gnome terminal atalhos
+
+Se você isto estiver causando problemas para você, é mais fácil alterar o atalho de teclado do GNOM-Terminal.
+
+Como se mover entre as janelas abertas dentro do Vim
+As principais teclas de movimentação dentro das janelas obedecem a 2 princípios básicos (que você já deve conhecer...):
+
+Como se referem a janelas (windows), elas começam com o 'Ctrl + W' — tal como mencionei antes.
+Usam as teclas de movimentação padrão do Vim.
+Segue a relação dos atalhos de teclado para "pular" entre janelas no Vim:
+
+CTRL + W + ↓, CTRL + W + J — Move o cursor para a próxima janela abaixo. Note que o comando não é cíclico, ou seja, quando chegar à última janela, embaixo, ele para de ter efeito.
+CTRL + W + ↑, CTRL + W + K — Move para a janela de cima.
+CTRL + W + ←, CTRL + W + H — Move para a janela à esquerda.
+CTRL + W + →, CTRL + W + L — Move para a janela à direita.
+CTRL + W + W — Move o cursor para a próxima janela, ao lado ou embaixo. Já este comando é cíclico, ou seja, ele não para e recomeça após chegar à última janela, voltando para a primeira, que estava selecionada, quando você começou.
+CTRL + W + T — Move o cursor direto para a janela mais próxima do canto superior esquerdo (topo).
+CTRL + W + B — Move o cursor direto para a janela mais próxima do canto inferior direito.
+CTRL + W + P — Move o cursor para a janela previamente acessada.
+Tenha em mente que você precisa estar no modo comando, para poder se mover entre as janelas com estas teclas.
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+Em adição a este tutorial, veja como está o meu arquivo ~/.vimrc pessoal:
+
+# Número de linhas
+set number
+
+# Cor de sintaxe
+syntax on
+
+# Correção de tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set smarttab
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
