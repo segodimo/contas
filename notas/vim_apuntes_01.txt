@@ -1,3 +1,15 @@
+/*++++++++++++++++++++++++*/
+<!-- RPi -->
+ssh segodimo@192.168.1.103
+<!-- ssh pi@192.168.1.104 -->
+ssh pi@192.168.1.104
+<!-- rodando no -->
+http://192.168.1.104:3000/api
+<!-- resetear -->
+sudo reboot
+<!-- desliga -->
+sudo shutdown -h now
+/*++++++++++++++++++++++++*/
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 ººº GIT
@@ -25,8 +37,8 @@ git status
 git log
 
 <!-- fazer un comit despues de add all comit con mensaje -->
-commit -m 'Agregando notas'
-commit -m 'XSXSXSXSXSXSXSXSXSXSXSX'
+git commit -m 'Agregando notas'
+git commit -m 'XSXSXSXSXSXSXSXSXSXSXSX'
 
 <!-- revisar ultimo comit, id de todos os commit -->
 git log
@@ -55,10 +67,11 @@ mv /home/user/my_static /home/user/static
 
 vim -O index.js routes/r_on.js routes/r_us.js
 
-set nowgrap
-set wgrap
 syntax on
 set number 
+set nowgrap
+
+set wgrap
 J Join linhas
 ggVG — Seleciona tudo.
 
@@ -67,9 +80,87 @@ Hex ........... abre o file explorer horizontalmente
 e .   ......... abre o file explorer na janela atual
 qall cerrar tudo
 
-
+set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
+/*======================================================*/
+syntax on
+set number 
+set nowrap
+
+set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
+
+set list
+set listchars=eol:¶,tab:-¬,trail:␠,nbsp:⎵,space:·
+
+
+
+let base16colorspace=256
+
+set termguicolors
+
+"autocompletition"
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+call plug#begin()
+" Declare the list of plugins.
+Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
+Plug 'sheerun/vim-polyglot'
+Plug 'https://github.com/ervandew/supertab.git'
+Plug 'chriskempson/base16-vim'
+Plug 'crusoexia/vim-monokai'
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+
+
+colorscheme monokai
+hi Specialkey ctermfg=darkgrey
+
+/*======================================================*/
+
+
+/*+++++++++++++++++++++*/
+/*======================================================*/
+set list
+set listchars=eol:⏎,tab:-¬,trail:␠,nbsp:⎵,space:·
+<!-- alternativa2 -->
+set listchars=eol:¶,tab:-¬,trail:␠,nbsp:⎵,space:·
+/*======================================================*/
+
+set listchars=space:·
+
+// set listchars=tab:>-
+
+set listchars=tab:→\ ,trail:·,precedes:«,extends:»,eol:¶
+set listchars=tab:→\ ,trail:␣,extends:…,eol:⏎
+set listchars=tab:‣\ ,trail:·,precedes:«,extends:»,eol:¬
+set listchars=tab:>-,trail:.,precedes:<,extends:>,eol:⏎
+
+<+++ TESETES QUE FUNCIONAM +++>
+hi Comment ctermfg=LightBlue
+hi Comment ctermfg=darkgrey
+hi Specialkey ctermfg=Blue
+hi Specialkey ctermfg=darkgrey
+
+
+let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
+
+
+set termguicolors
+colorscheme atlantis
+colorscheme metalheart
+colorscheme base16-default-dark
+
+colorscheme base16-irblack
+
+
+Plug 'shapeoflambda/dark-purple.vim'
+/*+++++++++++++++++++++*/
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 Para alterar duas janelas divididas verticalmente para dividir no horizonte
 
 Ctrl- w t Ctrl-w K

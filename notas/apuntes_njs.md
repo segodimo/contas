@@ -62,13 +62,28 @@ db.all('select * from Users', (err, results)=>{
   console.log(results);
 });
 
-/*++++++++++++++++++++++++*/
-<!-- creando banco de dados -->
+/*======================================================*/
+ººº SQLITE
+
+<!-- sair de sqlite se precisar-->
+.exit
+
+<!-- Abrir o criar banco de dados -->
 sqlite3 cnts.db
 
-<!-- craindo la tabla -->
+<!-- ver todas las tablas -->
+.table
+/*-----------------*/
+<!-- craindo as tabelas -->
 
 <!-- id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, -->
+<!-- 
+tab_us
+id
+usuario
+senha
+email
+ -->
 
 CREATE TABLE usuarios(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -76,6 +91,111 @@ CREATE TABLE usuarios(
   senha VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL
 );
+/*-----------------*/
+
+/*---------------------------*/
+<!-- tab_val -->
+<!-- 
+id
+id_us
+tipo
+produto
+valor
+parcelas
+data_i
+data_f
+id_lemb
+status
+
+create table tbl1(id int primary key, dt datetime default current_timestamp);
+ -->
+
+<!-- saldo -->
+<!-- cobro -->
+<!-- compra -->
+
+
+CREATE TABLE tab_val(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id_us INTEGER NOT NULL,
+  tipo VARCHAR(50) NOT NULL,
+  produto VARCHAR(50) NOT NULL,
+  valor INTEGER NOT NULL,
+  parcelas INTEGER NULL,
+  data_i DATETIME NULL,
+  data_f DATETIME NULL,
+  id_lemb INTEGER NULL,
+  status BOOLEAN
+);
+
+
+<!-- apagar tabela -->
+DROP TABLE tab_val;
+
+<!-- ver todas las tablas -->
+.table
+
+<!-- INCERT -->
+INSERT INTO tab_val VALUES(NULL,2,'compra','mercado',150,NULL,'2019-06-28 12:00','2019-06-28 12:00',NULL,1);
+INSERT INTO tab_val VALUES(NULL,1,'compra','blusa',45,NULL,'2019-06-28 12:00','2019-06-28 12:00',NULL,1);
+INSERT INTO tab_val VALUES(NULL,1,'compra','calça',150,2,'2019-07-28 00:00',2019-08-28 00:00,NULL,1);
+INSERT INTO tab_val VALUES(NULL,1,'compra','camisa',80,2,'2019-06-28 12:00',2019-08-28 00:00,NULL,1);
+INSERT INTO tab_val VALUES(NULL,1,'cobro','Itaú',23,NULL,'2019-06-28 12:00',NULL,NULL,1);
+INSERT INTO tab_val VALUES(NULL,1,'cobro','Pós',888,NULL,'2019-07-20 00:00',NULL,NULL,1);
+INSERT INTO tab_val VALUES(NULL,1,'cobro','Spotify Nos',30,NULL,'2019-07-20 00:00',NULL,NULL,1);
+INSERT INTO tab_val VALUES(NULL,1,'cobro','Spotify Santy',30,NULL,'2019-07-20 00:00',NULL,NULL,1);
+INSERT INTO tab_val VALUES(NULL,1,'cobro','Netflix',28,NULL,'2019-07-20 00:00',NULL,NULL,1);
+
+<!-- ver registros -->
+SELECT * FROM tab_val;
+/*-----------------*/
+<!-- tab_lem -->
+<!-- 
+id
+id_us
+tipo
+titulo
+texto
+data_i
+data_f
+status
+ -->
+
+
+CREATE TABLE tab_lem(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id_us INTEGER NOT NULL,
+  tit VARCHAR(50) NOT NULL,
+  txt VARCHAR(500) NOT NULL,
+  data_i DATETIME NULL,
+  data_f DATETIME NULL,
+  status BOOLEAN
+);
+
+<!-- INCERT -->
+INSERT INTO tab_lem VALUES(NULL, 1, 'Primera Anotação', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam tempora quia ea sunt modi quisquam.', '2019-06-28 12:00', '2019-06-28 12:00', 1 );
+INSERT INTO tab_lem VALUES(NULL, 2, 'Segunda Anotação', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam tempora quia ea sunt modi quisquam.', '2019-06-28 12:00', '2019-06-28 12:00', 1 );
+INSERT INTO tab_lem VALUES(NULL, 1, 'Terceira Anotação', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam tempora quia ea sunt modi quisquam.', '2019-06-28 12:00', '2019-06-28 12:00', 1 );
+INSERT INTO tab_lem VALUES(NULL, 3, 'Quarta Anotação', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam tempora quia ea sunt modi quisquam.', '2019-06-28 12:00', '2019-06-28 12:00', 1 );
+
+
+<!-- apagar tabela -->
+DROP TABLE tab_lem;
+
+<!-- ver todas las tablas -->
+.table
+
+<!-- ver registros -->
+SELECT * FROM tab_lem;
+
+/*-----------------*/
+
+
+
+
+
+
+
 
 <!-- ver la tabla usuarios -->
 .schema usuarios
@@ -138,6 +258,31 @@ sqlite> DELETE FROM usuarios WHERE id=4;
 <!-- Você pode exibir os dados na forma de coluna. -->
 
 sqlite> .mode column
+
+/*++++++++++++++++++++++++*/
+
+
+
+
+
+/*======================================================*/
+
+<!-- ver tabla - abre db - ver tabelas - ligarcabesalhos colunas, SELECT para ver-->
+
+$sqlite3 cnts.db
+sqlite> .tables
+sqlite> .header on
+sqlite> .mode column
+sqlite> SELECT * FROM usuarios;
+
+<!-- cambiar de nombe a tabela -->
+<!-- sqlite> ALTER TABLE clientes_novo RENAME TO clientes; -->
+
+ALTER TABLE usuarios RENAME TO tab_us;
+
+
+
+
 
 
 /*======================================================*/
